@@ -1,0 +1,55 @@
+store:
+  title: ActiveState Stackato Sample Applications
+  contact: Stackato Support <stackato-support@activestate.com>
+  icon: activestate.png
+  icon-url: http://get.stackato.com/store/icon/
+  src-url: git://github.com/Stackato-Apps/
+  defaults:
+    id: $id-from-name
+    mem: 128
+    src: $id.git
+    icon: $id.png
+    commit: master
+    info: $github-url#readme
+
+apps:
+- name: Currency Converter
+  desc: Currency converter using Python bottle framework
+  framework: Python
+  runtime: ActivePython 2.7
+  services: Redis
+  id: currency
+  src: bottle-currency.git
+  mem: 64
+  tags: converter, currency, money
+
+- name: Env
+  desc: Simple node.js sample application that prints server environment variables
+  framework: Node.js
+  runtime: Node.js 0.6
+  src: node-env.git
+  mem: 32
+  icon: default
+
+- name: PHP Info
+  desc: Executes the phpinfo() function.
+  framework: PHP
+  runtime: PHP 5
+  id: phpinfo
+  icon: php.png
+
+- name: Rails Movies
+  desc: Sample Rails app to manage a list of movie titles.
+  framework: Rails 3
+  runtime: Ruby 1.9
+  services: MySQL
+  src: rails-movie.git
+  icon: ruby.png
+
+- name: Scaling Demo
+  desc: Displays IP and PID of the current instance of the app, useful for demonstrating multiple running instances.
+  framework: Perl
+  runtime: ActivePerl 5.14
+  src: mojo-scalingdemo.git
+  mem: 64
+  icon: default
