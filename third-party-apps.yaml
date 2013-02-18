@@ -1,0 +1,307 @@
+store:
+  title: Third Party Apps for Stackato
+  contact: Stackato Support <stackato-support@activestate.com>
+  icon: third-party.png
+  icon-url: http://get.stackato.com/store/icon/
+  src-url: git://github.com/Stackato-Apps/
+  defaults:
+    id: $id-from-name
+    src: $id.git
+    icon: $id.png
+    commit: stackato
+    info: $github-url#readme
+    mem: 128
+
+apps:
+- name: Ace Editor
+  desc: Ace is a standalone code editor written in JavaScript, used by Cloud9 IDE.
+  framework: Node.js
+  runtime: Node.js 0.6
+  license: MPL
+  src: ace.git
+
+- name: Bugzilla
+  desc: A bug tracking system for individuals or groups of developers
+  framework: Perl
+  runtime: ActivePerl 5.14
+  services: MySQL
+  license: MPL
+  commit: master
+  mem: 256
+
+- name: CakePHP
+  desc: The Rapid Development Framework for PHP
+  framework: PHP
+  runtime: PHP 5
+  services: MySQL
+  license: MIT
+
+- name: ClojureSphere
+  desc: Browsable dependency graph of Clojure projects.
+  framework: Buildpack
+  license: EPL
+  icon: clojure.png
+  mem: 512
+
+- name: Django CMS
+  desc: A content management system platform for publishing content on the internet.
+  framework: Python
+  runtime: ActivePython 2.7
+  services: PostgreSQL
+
+- name: Etherpad Lite
+  desc: Collaborate on documents in really real-time.
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: MySQL
+  license: EPL
+  icon: etherpad.png
+  mem: 64
+
+- name: Hastebin
+  desc: Haste is an open-source pastebin software written in node.js, which is easily installable in any network.
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: Redis
+  license: MIT
+  src: haste-server.git
+
+- name: httpbin
+  desc: HTTP Request & Response Service
+  framework: Python
+  runtime: ActivePython 2.7
+  icon: default
+
+- name: Jaspersoft
+  desc: Jaspersoft provides the most flexible, cost effective and widely deployed business intelligence software in the world, enabling better decision making through highly interactive, web-based reports, dashboards and analysis.
+  framework: Java_Web
+  runtime: Java 6
+  services: MySQL
+  mem: 3000
+
+- name: Jenkins
+  desc: Jenkins is an open source continuous integration tool written in Java.
+  framework: Java_Web
+  runtime: Java 6
+  licence: MIT
+  mem: 1024
+
+- name: Joomla
+  desc: Joomla is a free and open source content management framework (CMF) for publishing content on the World Wide Web and intranets and a model-view-controller (MVC) Web application framework that can also be used independently.
+  framework: PHP
+  runtime: PHP 5
+  services: File System, MySQL
+  license: GPLv2
+  src: joomla-cms.git
+
+- name: Kitchensink
+  desc: A JEE application packaged as a EAR archive. 
+  framework: Java_EE
+  runtime: Java 6
+  id: kitchensink-ear
+  commit: stackato-store
+  icon: java.png
+  mem: 512
+
+- name: MoinMoin Wiki
+  desc: MoinMoin is an advanced, easy to use and extensible WikiEngine with a large community of users. Said in a few words, it is about collaboration on easily editable web pages.
+  framework: Python
+  runtime: ActivePython 2.7
+  services: File System
+  license: GPLv2
+  id: moinmoin
+  src: moin.git
+  commit: master
+
+- name: Movie Fun
+  desc: This is a full JEE6 sample with JSF2.0, EJB3.1 and JPA2.0.
+  framework: Java_EE
+  runtime: Java 6
+  services: MySQL
+  id: moviefun
+  commit: stackato-store
+  mem: 512
+  icon: java.png
+
+- name: MultiSweeper
+  desc: A multiplayer minesweeper-style game
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: Redis
+  mem: 96
+
+- name: Nide
+  desc:  Beautiful IDE for Node.JS
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: File System
+  license: MIT
+  commit: master
+
+- name: Node Backbone Mongo
+  desc: This demo was written to illustrate how a server-side JavaScript solution could be applied to the TodosMVC application.
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: MongoDB
+  icon: default
+  commit: master
+
+- name: Node Chat
+  desc: A simple chat application in Node.js with no other dependencies. Originally written by Ryan Dahl, the creator of Node.js.
+  framework: Node.js
+  runtime: Node.js 0.6
+  commit: master
+  icon: chat.png
+  mem: 64
+
+- name: Number Guess
+  desc: This simple sample aims to demonstrate the support of JEE6 applications (JSF, Annotation, Injection etc.).
+  framework: Buildpack
+  commit: master
+  src: Numberguess
+  mem: 512
+  icon: java.png
+
+- name: ownCloud
+  desc: A flexible, open source file sync and share solution
+  framework: PHP
+  runtime: PHP 5
+  src: owncloud-core
+  services: File System, MySQL
+  license: AGPLv3
+
+- name: Perl::Critic
+  desc: Perl::Critic Website
+  framework: Perl
+  runtime: ActivePerl 5.14
+  src: perlcritic.com.git
+
+- name: Pet Catalog
+  desc: Simulated pet catalog website in JavaEE framework and MySQL service. This is a full JEE6 sample with JSF2.0, EJB3.1 and JPA2.0.
+  framework: Java_EE
+  runtime: Java 6
+  services: MySQL
+  commit: stackato-store
+  mem: 512
+
+- name: Pet Clinic
+  desc: Simulated pet clinic website in Java using Spring framework and MySQL service deployed using the buildpack framwork.  This takes a few minutes to start once installed as it does stage-time compilation.
+  framework: Buildpack
+  services: MySQL
+  mem: 512
+
+- name: Photo Booth
+  desc: A photobooth application. Requires working webcam, stores pictures locally.
+  framework: Perl
+  runtime: ActivePerl 5.14
+  id: photobooth
+
+- name: phpBB3
+  desc: phpBB is a popular open-source bulletin board written in PHP.
+  framework: PHP
+  runtime: PHP 5
+  services: File System, MySQL
+  license: GPLv2
+
+- name: Pinax Social
+  desc: Pinax is an open-source platform built on the Django Web Framework. It provides numerous reusable Django apps, starter projects and infrastructure tools. pinax-social, a social networking site, is its "kitchen sink" demo demonstrating many of Pinax's features.
+  framework: Python
+  runtime: ActivePython 2.7
+  services: MySQL
+  icon: pinax.png
+
+- name: Play! Chat
+  desc: An HTTP based chat application. We use the asynchronous request model to be able to handle a lot of simultaneous connected users without resources waste.
+  framework: Buildpack
+  commit: master
+  icon: play.png
+  mem: 256
+
+- name: Retester
+  desc: Perl and Mojolicious based web application for testing and debugging regular expressions.
+  framework: Perl
+  runtime: ActivePerl 5.14
+  license: Unknown
+  icon: default
+
+- name: Sendgrid Django Demo
+  desc: A simple app that sends a test message via SendGrid.
+  framework: Python
+  runtime: ActivePython 2.7
+  id: sendgrid
+  src: sendgrid-django-demo.git
+  commit: master
+  icon: sendgrid.png
+  license: Unknown
+  mem: 64
+
+- name: Smallest Federated Wiki (node)
+  desc: Node.js port of A Very Futuristic Wiki
+  framework: Node.js
+  runtime: Node.js 0.6
+  services: File System
+  license: GPL/MIT
+  id: fedwiki
+  icon: default
+  src: Smallest-Federated-Wiki.git
+  info: https://github.com/Stackato-Apps/Smallest-Federated-Wiki/tree/stackato/.paas/stackato#readme
+
+- name: Smallest Federated Wiki
+  desc: A Very Futuristic Wiki by the inventor of Wiki himself
+  framework: Sinatra
+  runtime: Ruby 1.9
+  services: File System
+  license: GPL/MIT
+  id: fedwiki
+  icon: default
+  src: Smallest-Federated-Wiki.git
+  commit: stackato-sinatra
+  info: https://github.com/Stackato-Apps/Smallest-Federated-Wiki/tree/stackato-sinatra/.paas/stackato#readme
+
+- name: SugarCRM
+  desc: Popular CRM software.
+  framework: PHP
+  runtime: PHP 5
+  services: File System, MySQL
+  license: AGPLv3
+  mem: 256
+
+- name: Tornado Chat with MongoDB
+  desc: This is a multi-user chat application based on the Tornado Python web framework. It uses your Google account for login.
+  framework: Python
+  runtime: ActivePython 2.7
+  services: MongoDB
+  id: tornado-chat
+  src: tornado-chat-mongo.git
+  commit: master
+  icon: chat.png
+
+- name: Try Clojure
+  desc: TryClojure is a online Clojure REPL written using Noir and Chris Done's jquery console.
+  framework: Buildpack
+  license: EPL
+  id: tryclojure
+  icon: clojure.png
+  mem: 512
+
+- name: tty-js
+  desc: A terminal in your browser using node.js and socket.io. Based on Fabrice Bellards vt100 for jslinux.
+  framework: Node.js
+  runtime: Node.js 0.6
+  license: MIT
+  src: tty.js.git
+  icon: ttyjs.png
+
+- name: Werkzeug Debugger
+  desc: This sample demonstrates the in-browser interactive debugger feature provided by Werkzeug.
+  framework: Python
+  runtime: ActivePython 2.7
+  commit: master
+
+- name: WordPress
+  desc: WordPress is a very popular blogging platform
+  framework: PHP
+  runtime: PHP 5
+  services: File System, MySQL
+  license: GPLv2
+  mem: 256
