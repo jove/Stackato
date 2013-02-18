@@ -3,7 +3,7 @@ store:
   contact: Stackato Support <stackato-support@activestate.com>
   icon: third-party.png
   icon-url: http://get.stackato.com/store/icon/
-  src-url: git://github.com/Stackato-Apps/
+  src-url: https://github.com/Stackato-Apps/
   defaults:
     id: $id-from-name
     mem: 256
